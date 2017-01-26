@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+	<a class="navbar-brand" href="#">Test</a>
+	<ul class="nav navbar-nav">
+		<li routerLink="/users" routerLinkActive="active">
+			<a>Users</a>
+		</li>
+		<li routerLink="/stats" routerLinkActive="active">
+			<a>Statistics</a>
+		</li>
+	</ul>
+</nav>
+
+<router-outlet></router-outlet>

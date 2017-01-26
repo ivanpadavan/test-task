@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row" style="display: flex; flex-direction: row; align-items: center">
+    <div class="col-xs-12 col-sm-2" style="height: 100%">
+      <button class="btn btn-primary" (click)="observe()" style="margin-top: 15px; width: 100%">Observe</button>
+      <textarea [(ngModel)]="observableText" style="margin: 15px 0; width: 100%; height: calc(100% - 81px)"></textarea>
+    </div>
+    <div class="col-xs-12 col-sm-5">
+
+        <h1 class="text-center">Words</h1>
+        <canvas baseChart
+                [data]="wordData"
+                [labels]="wordLabels"
+                [chartType]="'pie'"
+                [colors]="colors"></canvas>
+
+    </div>
+    <div class="col-xs-12 col-sm-5">
+      <h1 class="text-center">Letters</h1>
+      <canvas baseChart
+              [data]="letterData"
+              [labels]="letterLabels"
+              [chartType]="'pie'"
+              [colors]="colors"></canvas>
+    </div>
+  </div>
+</div>

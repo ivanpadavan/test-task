@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$navbar-height: 50px;
+$navbar-margin-bottom: 0;
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+html, body, app-root, .row, #map {
+  height: 100%;
+}
+
+.container-fluid {
+  height: calc(100% - 51px);
+}
