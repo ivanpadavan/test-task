@@ -12,13 +12,11 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { KeysPipe } from './pipes/keys.pipe';
 import { UsersComponent } from './components/users/users.component';
 import {Routes, RouterModule} from "@angular/router";
-import { StatsComponent } from './components/stats/stats.component';
-import {ChartsModule} from "ng2-charts";
 
 const appRoutes: Routes = [
-  { path: 'users', component: UsersComponent },
   { path: '', redirectTo: '/users', pathMatch: 'full' },
-  { path: 'stats', component: StatsComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'stats', loadChildren: './components/stats/stats.module#StatsModule' },
 ];
 
 @NgModule({
@@ -27,17 +25,14 @@ const appRoutes: Routes = [
     UserBadgeComponent,
     CapitalizePipe,
     KeysPipe,
-    UsersComponent,
-    StatsComponent
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
     HttpModule,
-    ModalModule.forRoot(),
-    ChartsModule
-
+    ModalModule.forRoot()
   ],
   providers: [MapService, ApiService],
   bootstrap: [AppComponent]

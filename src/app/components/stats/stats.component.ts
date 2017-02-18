@@ -39,7 +39,7 @@ export class StatsComponent implements OnInit {
           .subscribe((res)=>data.push(res))
       })
 
-    for (let i = this.colors[0].backgroundColor.length; i< labels.length; i++) {
+    for (let i = this.colors[0].backgroundColor.length; i < labels.length; i++) {
       this.colors[0].backgroundColor.push(this.randomColor())
     }
 
